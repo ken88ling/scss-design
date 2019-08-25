@@ -1,0 +1,6 @@
+body {
+  background-color: #005dff;
+  -webkit-clip-path: polygon(100% 0, 100% 46%, 52% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 46%, 52% 100%, 0 100%, 0 0);
+}
+/*# sourceMappingURL=main.css.map */
