@@ -5,12 +5,20 @@ $color: (
   primary-dark: darken(#005dff, 40%)
 );
 
+$padding: 15px;
+$border: 15px;
+
 @function color($color-name) {
   @return map-get($color, $color-name);
 }
 
-$padding: 15px;
-$border: 15px;
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
 
 body,
 html {
@@ -29,6 +37,10 @@ body {
     height: 100%;
     position: absolute;
     z-index: -1;
+
+    @include desktop {
+      clip-path: polygon(0 0, 78% 0, 53% 100%, 0% 100%);
+    }
   }
 
   // logo
